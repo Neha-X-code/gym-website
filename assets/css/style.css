@@ -5084,3 +5084,12 @@ select.form-select option {
   font-size: 18px;
   line-height: 27px;
 }/*# sourceMappingURL=style.css.map */
+
+.cont{
+  width: 250px;
+  float: left;
+}
+.contf{
+  width: 400px;
+  float: left;
+}
