@@ -3103,7 +3103,54 @@ select.form-select option {
   background: #ee3a17;
 }
 .classes-card .card-img {
+  width: 100%;
+    height: auto;
+    object-fit: cover;
   transition: transform 0.5s ease;
+}
+.classes-card img.women-1 {
+  height: 477px;
+  object-fit: cover;
+}
+@media (max-width: 1200px) {
+  .classes-card img.women-1 {
+      height: 478px; /* Adjust height for medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .classes-card img.women-1 {
+      height: 392px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .classes-card img.women-1 {
+      height: 499px; /* Adjust height for very small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .classes-card img.women-1 {
+      height: 494px; /* Further adjust height for extra small screens */
+  }
+}
+@media (max-width: 480px) {
+  .classes-card img.women-1 {
+      height: 483px; /* Adjust height for very narrow screens */
+  }
+}
+
+@media (max-width: 375px) {
+  .classes-card img.women-1 {
+      height: 388px; /* Adjust height for small mobile devices */
+  }
+}
+
+@media (max-width: 320px) {
+  .classes-card img.women-1 {
+      height: 295px; /* Adjust height for very small mobile devices */
+  }
 }
 .classes-card:hover > .card-img {
   transform: scale(1.2) rotate(10deg);
