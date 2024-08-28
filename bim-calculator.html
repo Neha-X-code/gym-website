@@ -16,6 +16,23 @@
     <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        .bmi-result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+            opacity: 1;
+            transition: opacity 1s ease-out;
+        }
+    </style>
 </head>
 
 <body>
@@ -102,21 +119,18 @@
         <div class="ak-height-150 ak-height-lg-80"></div>
         <div class="container">
             <div class="col-md-8">
-                <form class="row bim-calculator-from">
+                <form id="bmi-form" class="row bim-calculator-from">
                     <div class="col-md-6">
-                        <label for="Height" class="label">Your Height*</label>
-                        <input class="form-control style1 type2" id="Height" name="height" type="text"
-                            placeholder="Height...">
+                        <label for="Height" class="label">Your Height (in cm)*</label>
+                        <input class="form-control style1 type2" id="Height" name="height" type="text" placeholder="Height...">
                     </div>
                     <div class="col-md-6">
-                        <label for="Weight" class="label">Your Weight*</label>
-                        <input class="form-control style1 type2" id="Weight" name="weight" type="text"
-                            placeholder="Weight...">
+                        <label for="Weight" class="label">Your Weight (in kg)*</label>
+                        <input class="form-control style1 type2" id="Weight" name="weight" type="text" placeholder="Weight...">
                     </div>
                     <div class="col-md-6">
                         <label for="Gender" class="label">Select Gender*</label>
-                        <select class="form-select style1 type2" id="Gender" name="gender"
-                            aria-label="Default select example">
+                        <select class="form-select style1 type2" id="Gender" name="gender" aria-label="Default select example">
                             <option selected>Gender...</option>
                             <option value="1">Male</option>
                             <option value="2">Female</option>
@@ -124,8 +138,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="Want" class="label">I Want*</label>
-                        <select class="form-select style1 type2" id="Want" name="want"
-                            aria-label="Default select example">
+                        <select class="form-select style1 type2" id="Want" name="want" aria-label="Default select example">
                             <option selected>I Want (Weight Loss)...</option>
                             <option value="Weight Loss">Weight Loss</option>
                             <option value="Weight Gain">Weight Gain</option>
@@ -137,25 +150,22 @@
                     </div>
                     <div class="ak-height-35 ak-height-lg-20"></div>
                     <div class="col-md-12">
-                        <button type="submit" class="button-primary style_2 ak-center">
-                            CHOOSE PLAN
-                            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20"
-                                    viewBox="0 0 16 20" fill="none">
-                                    <g clip-path="url(#clip0_1735_935)">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M0.585999 18.938L9.586 9.93799L0.585999 0.937988H6.99073L15.9907 9.93799L6.99073 18.938H0.585999Z"
-                                            fill="white"></path>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1735_34593554">
-                                            <rect width="16" height="19" fill="white" transform="translate(0 0.5)">
-                                            </rect>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                        <button type="button" id="calculate-bmi" class="button-primary style_2 ak-center">
+                            CALCULATE
+                            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
+                                <g clip-path="url(#clip0_1735_935)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.585999 18.938L9.586 9.93799L0.585999 0.937988H6.99073L15.9907 9.93799L6.99073 18.938H0.585999Z" fill="white"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1735_34593554">
+                                        <rect width="16" height="19" fill="white" transform="translate(0 0.5)"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
                             </span>
                         </button>
                     </div>
+                    <div class="bmi-result" id="bmi-result"></div>
                 </form>
             </div>
         </div>
@@ -172,7 +182,7 @@
                     <h4 class="moving-text type2">
                         <span> Stronger every rep </span>
                         <span>💪</span>
-                        <span> prouder every ste</span>
+                        <span> prouder every step</span>
                         <span>💪</span>
                         <span>Push your limits</span>
                         <span>💪</span>
@@ -232,7 +242,6 @@
                     </p>
                     <p><span class="time">Call-Us:</span> 8136868091</p>
                     <a href="mailto:reachus@everyouthgym.in" class="email"><span>Email:</span> reachus@everyouthgym.in</a>
-                    <a href="mailto:example@email.com" class="email"><span>Email:</span> reachus@everyouthgym.in</a>
                     <p><span class="time">Open Hour:</span> Mon - Sat</p>
                     <p><span class="time"></span>Morning : 5:30 AM -9:30 AM</p>
                     <p><span class="time"></span>Evening : 4:30 PM -9:00 PM</p>
@@ -244,7 +253,6 @@
                         <a href="about.html">About</a>
                         <a href="services.html">Services</a>
                         <a href="package.html">Packages</a>
-                        <a href="trainer.html">Trainer</a>
                         <a href="contact-us.html">Contact Us</a>
                     </div>
                     <div class="social">
@@ -318,6 +326,41 @@
     <script src="assets/js/plugins/lightgallery.min.js"></script>
     <script src="assets/js/plugins/swiper.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('calculate-bmi').addEventListener('click', function() {
+            var height = parseFloat(document.getElementById('Height').value);
+            var weight = parseFloat(document.getElementById('Weight').value);
+    
+            if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+                alert('Please enter valid height and weight.');
+                return;
+            }
+    
+            // Convert height from cm to meters
+            height = height / 100;
+    
+            // Calculate BMI
+            var bmi = weight / (height * height);
+    
+            // Display BMI result
+            var resultText = 'Your BMI is ' + bmi.toFixed(2);
+            var resultElement = document.getElementById('bmi-result');
+            resultElement.textContent = resultText;
+            resultElement.style.display = 'block'; // Show result
+    
+            // Fade out result after 5 seconds
+            setTimeout(function() {
+                resultElement.style.opacity = '0';
+                setTimeout(function() {
+                    resultElement.style.display = 'none'; // Hide after fade out
+                    resultElement.style.opacity = '1'; // Reset opacity for next use
+                }, 1000); // Match this duration with the CSS transition time
+            }, 5000);
+    
+            // Clear input fields and reset the form
+            document.getElementById('bmi-form').reset();
+        });
+    </script>
 </body>
 
 </html>
