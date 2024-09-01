@@ -2765,6 +2765,51 @@ select.form-select option {
     font-size: 42px;
   }
 }
+/* Adjusting margins and paddings for a more compact form */
+.bim-calculation .form-control,
+.bim-calculation .form-select {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px; /* Add margin between form fields */
+    padding: 15px; /* Ensure padding is sufficient for better appearance */
+}
+
+.bim-calculation .row {
+    margin-right: -15px; /* Remove extra margins */
+    margin-left: -15px;
+}
+
+.bim-calculation .col-md-2 {
+    padding: 0 15px; /* Add padding to columns for spacing */
+    flex: 1; /* Allow columns to grow equally */
+}
+
+.bim-calculation .col-md-2 > * {
+    width: 100%; /* Ensure all form elements use the full column width */
+}
+
+.bim-calculation .button-primary {
+    width: 100%; /* Ensure button covers full width */
+    box-sizing: border-box;
+    padding: 15px; /* Add padding for better appearance */
+}
+
+.bim-calculation .bmi-result {
+    margin-top: 20px; /* Space above result */
+}
+
+@media (max-width: 768px) {
+    .bim-calculation .col-md-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0; /* Remove padding for small screens */
+        margin-bottom: 15px; /* Adjust margin for small screens */
+    }
+}
+
+
+
+
 /*--------------------------------------------------------------
   14. Slideing Text
 ----------------------------------------------------------------*/
@@ -4954,6 +4999,9 @@ select.form-select option {
   .row-reverse-column > * {
     width: 100%;
   }
+}
+.services-img {
+  opacity: 0.6; /* Adjust this value between 0 (fully transparent) and 1 (fully opaque) */
 }
 /*--------------------------------------------------------------
   28. Cta

@@ -16,6 +16,46 @@
     <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+       /* Adjusting the margins and paddings for a more compact form */
+.bim-calculator-from .form-control,
+.bim-calculator-from .form-select {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.bim-calculation img.bim-calculator-img {
+    margin-bottom: 20px;
+}
+
+.ak-height-150, .ak-height-lg-80, .ak-height-35, .ak-height-lg-20 {
+    height: 20px !important;
+}
+
+/* Styles for the toggle button */
+#toggle-bmi-form {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* Styles for the BMI result */
+.bmi-result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+    </style>
 </head>
 
 <body>
@@ -38,10 +78,10 @@
                                     <a href="index.html">Home</a>
                                 </li>
                                 <li>
-                                    <a href="about.html">About</a>
+                                    <a href="#about-section">About</a>
                                 </li>
                                 <li>
-                                    <a href="services.html">Services</a>
+                                    <a href="#sevice-section">Services</a>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="index.html#" class="nav-pages-item">Pages</a>
@@ -346,7 +386,7 @@
 
     <!-- Start About -->
     <div class="ak-height-135 ak-height-lg-80"></div>
-    <section class="container">
+    <section id="about-section"    class="container">
         <div class="about-section">
             <div class="img-content" data-aos="fade-right">
                 <div class="img-content-one image-hover-animation">
@@ -417,7 +457,7 @@
 
 
     <!-- Start Upcoming Classes -->
-    <div class="ak-height-135 ak-height-lg-80"></div>
+    <!-- <div class="ak-height-135 ak-height-lg-80"></div>
     <section>
         <div class="container">
             <div class="d-flex justify-content-between flex-column flex-lg-row gap-2">
@@ -494,7 +534,95 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+    <div class="ak-height-135 ak-height-lg-80"></div>
+    <div id = "sevice-section"   class="container">
+        <div class="section-heading style-1" data-aos="zoom-out">
+            <h2 class="section-title">
+                Our Services
+            </h2>
+        </div>
+        <div class="services-all">
+            <div class="services-card" data-aos="fade-up">
+                <div class="services-body">
+                    <a class="services-img-content">
+                        <img src="assets/img/services_1.png" class="services-img ak-bg " alt="...">
+                        <div class="services-info">
+                            <img src="assets/img/services_icon1.svg" alt="...">
+                            <h4 class="services-title">Bodybuilding & Competition Training</h4>
+                            <p class="services-text">Achieve peak physical condition with tailored bodybuilding and competition training programs designed to help you build muscle, increase strength, and excel on stage.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="services-number">01</div>
+            </div>
+            <div class="services-card mt-xl-5" data-aos="fade-up">
+                <div class="services-body">
+                    <a  class="services-img-content">
+                        <img src="assets/img/services_2.png" class="services-img ak-bg" alt="...">
+                        <div class="services-info">
+                            <img src="assets/img/services_icon2.svg" alt="...">
+                            <h4 class="services-title">General Fitness Training</h4>
+                            <p class="services-text">Maintain a healthy lifestyle with our general fitness training sessions, focusing on improving your overall well-being, flexibility, and stamina, suitable for all fitness levels.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="services-number">02</div>
+            </div>
+            <div class="services-card ms-xl-5" data-aos="fade-up">
+                <div class="services-body">
+                    <a  class="services-img-content">
+                        <img src="assets/img/services_3.png" class="services-img ak-bg" alt="...">
+                        <div class="services-info">
+                            <img src="assets/img/services_icon3.svg" alt="...">
+                            <h4 class="services-title">Spot Reduction & Figure Correction</h4>
+                            <p class="services-text">Target specific areas of your body with our spot reduction and figure correction training, helping you achieve a more sculpted and balanced physique.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="services-number">03</div>
+            </div>
+            <div class="services-card ps-xl-5 mt-xl-5" data-aos="fade-up">
+                <div class="services-body">
+                    <a  class="services-img-content">
+                        <img src="assets/img/services_4.png" class="services-img ak-bg" alt="...">
+                        <div class="services-info">
+                            <img src="assets/img/services_icon4.svg" alt="...">
+                            <h4 class="services-title">Weight Loss & Weight Gain</h4>
+                            <p class="services-text">Whether your goal is to shed pounds or add muscle mass, our personalized weight loss and weight gain programs will guide you toward your ideal body composition.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="services-number">04</div>
+            </div>
+            <div class="services-card" data-aos="fade-up">
+                <div class="services-body">
+                    <a  class="services-img-content">
+                        <img src="assets/img/women-2.jpg" class="services-img ak-bg" alt="...">
+                        <div class="services-info">
+                            <img src="assets/img/services_icon5.svg" alt="...">
+                            <h4 class="services-title">Women's Wellness</h4>
+                            <p class="services-text">Work with our expert female trainers to manage and overcome challenges related to PCOS/PCOD, thyroid issues, and irregular periods through specialized fitness programs designed to address your unique needs.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="services-number">05</div>
+            </div>
+            <div class="services-card mt-xl-5" data-aos="fade-up">
+                <div class="services-body">
+                    <a  class="services-img-content">
+                        <img src="assets/img/women-3.jpg" class="services-img ak-bg" alt="...">
+                        <div class="services-info">
+                            <img src="assets/img/services_icon6.svg" alt="...">
+                            <h4 class="services-title">Postpartum Weight Loss</h4>
+                            <p class="services-text">Regain your pre-pregnancy shape with our postpartum weight loss programs, carefully designed to help new mothers lose weight safely and effectively while restoring strength and energy.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="services-number">06</div>
+            </div>
+        </div>
+    </div>
     <!-- End Upcoming Classes -->
 
 
@@ -636,323 +764,6 @@
         </div>
     </section> -->
     <!-- End Team -->
-
-    <!-- Start  Schedule-->
-    <!-- <div class="ak-height-135 ak-height-lg-80"></div>
-    <section>
-        <div class="container">
-            <div class="section-heading style-1 type-1" data-aos="zoom-out">
-                <div class="section-subtitle">Class Schedule</div>
-                <h2 class="section-title">
-                    Working Schedule
-                </h2>
-            </div>
-            <div class="ak-height-50 ak-height-lg-40"></div>
-            <div class="schedule-calendar" data-aos="fade-up" data-aos-delay="300" data-aos-offset="200"
-                data-aos-duration="500">
-                <div class="table-responsive br-routine">
-                    <table class="tab-content">
-                        <tbody>
-                            <tr>
-                                <th class="cs-col-title one"></th>
-                                <th class="cs-col-title">
-                                    <div>Monday</div>
-                                </th>
-                                <th class="cs-col-title">
-                                    <div>Tuesday</div>
-                                </th>
-                                <th class="cs-col-title">
-                                    <div>Wednesday</div>
-                                </th>
-                                <th class="cs-col-title">
-                                    <div>Thursday</div>
-                                </th>
-                                <th class="cs-col-title">
-                                    <div>Friday</div>
-                                </th>
-                                <th class="cs-col-title">
-                                    <div>Saturday</div>
-                                </th>
-                                <th class="cs-col-title">
-                                    <div>Sunday</div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th class="cs-row-title">06.00 - 08.00</th>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">BOXING</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Professor Smith</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td></td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">Cardio</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">BOXING</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td></td>
-
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">CRAZE</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="cs-row-title">08.00 - 10.00</th>
-                                <td></td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">BOXING</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">BOXING</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">BOOTCAMP</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">BOXING</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Ms. Garcia</p>
-                                        </div>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="cs-row-title">10.00 - 12.00</th>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">YOGA</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td></td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">ZUMBA</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Mrs. Johnson</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">BOXING</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">SCULPT</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="cs-row-title">12.00 - 02.00</th>
-                                <td></td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">BOXING</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">SPIN</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">TONE UP</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="cs-row-title">02.00 - 04.00</th>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">CARDIO</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td></td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">Mr.Rodri</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">BOXING</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td></td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">MUSCLE</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">STRETCH</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Ms. Garcia</p>
-                                        </div>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="cs-row-title">04.00 - 06.00</th>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">WORKOUT</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Ms. Thompson</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">CARDIO</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Robert Cage</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">HIIT</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Mrs. White</p>
-                                        </div>
-                                    </a>
-                                </td>
-
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th class="cs-row-title">06.00 - 08.00</th>
-                                <td></td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">RHYTHM</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Dr. Patel</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">SCULPT</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Mrs. Khan</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td></td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">POWER</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Ms. Wilson</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">Dr. Patel</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Mr. Clark</p>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="cs-item tab-pane" href="classes-details.html">
-                                        <div class="cs-item-title">DMAYHEM</div>
-                                        <div class="cs-item-short-title">
-                                            <p>Coach Taylor</p>
-                                        </div>
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- End  Schedule-->
 
     <!-- Start feature and video -->
     <<div class="ak-height-135 ak-height-lg-80"></div>
@@ -1543,6 +1354,60 @@
         </div>
     </div>-->
     <!-- End Subscribe Email -->
+    <div class="bim-calculation" data-aos="fade-up">
+        <div class="ak-height-150 ak-height-lg-80"></div>
+        <div class="container">
+            <button class="button-primary" id="toggle-bmi-form">Show/Hide BMI Calculator</button>
+            <div class="col-md-12" id="bmi-form-container" style="display: none;">
+                <form id="bmi-form" class="row bim-calculator-form">
+                    <div class="col-md-12">
+                        <div class="row align-items-end">
+                            <div class="col-md-2">
+                                <label for="Height" class="label">Your Height (in cm)*</label>
+                                <input class="form-control style1 type2" id="Height" name="height" type="text" placeholder="Height...">
+                            </div>
+                            <div class="col-md-2">
+                                <label for="Weight" class="label">Your Weight (in kg)*</label>
+                                <input class="form-control style1 type2" id="Weight" name="weight" type="text" placeholder="Weight...">
+                            </div>
+                            <div class="col-md-2">
+                                <label for="Gender" class="label">Select Gender*</label>
+                                <select class="form-select style1 type2" id="Gender" name="gender" aria-label="Default select example">
+                                    <option selected>Gender...</option>
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="Age" class="label">Your Age*</label>
+                                <input class="form-control style1 type2" id="Age" name="age" type="text" placeholder="Age...">
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" id="calculate-bmi" class="button-primary style_2">
+                                    CALCULATE
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
+                                            <g clip-path="url(#clip0_1735_935)">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.585999 18.938L9.586 9.93799L0.585999 0.937988H6.99073L15.9907 9.93799L6.99073 18.938H0.585999Z" fill="white"></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1735_34593554">
+                                                    <rect width="16" height="19" fill="white" transform="translate(0 0.5)"></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bmi-result" id="bmi-result"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
 
     <!-- Start Footer -->
     <div class="ak-height-135 ak-height-lg-80"></div>
@@ -1645,6 +1510,49 @@
     <script src="assets/js/plugins/lightgallery.min.js"></script>
     <script src="assets/js/plugins/swiper.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        // JavaScript to toggle the visibility of the BMI form
+document.getElementById('toggle-bmi-form').addEventListener('click', function() {
+    const formContainer = document.getElementById('bmi-form-container');
+    formContainer.style.display = formContainer.style.display === 'none' ? 'block' : 'none';
+});
+
+// JavaScript to handle BMI calculation and display result
+document.getElementById('calculate-bmi').addEventListener('click', function() {
+    var height = parseFloat(document.getElementById('Height').value);
+    var weight = parseFloat(document.getElementById('Weight').value);
+
+    if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+        alert('Please enter valid height and weight.');
+        return;
+    }
+
+    // Convert height from cm to meters
+    height = height / 100;
+
+    // Calculate BMI
+    var bmi = weight / (height * height);
+
+    // Display BMI result
+    var resultText = 'Your BMI is ' + bmi.toFixed(2);
+    var resultElement = document.getElementById('bmi-result');
+    resultElement.textContent = resultText;
+    resultElement.style.display = 'block'; // Show result
+
+    // Fade out result after 5 seconds
+    setTimeout(function() {
+        resultElement.style.opacity = '0';
+        setTimeout(function() {
+            resultElement.style.display = 'none'; // Hide after fade out
+            resultElement.style.opacity = '1'; // Reset opacity for next use
+        }, 1000); // Match this duration with the CSS transition time
+    }, 5000);
+
+    // Clear input fields and reset the form
+    document.getElementById('bmi-form').reset();
+});
+
+    </script>
 </body>
 
 </html>
