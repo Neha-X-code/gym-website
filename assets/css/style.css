@@ -2952,14 +2952,14 @@ select.form-select option {
 .about-section {
   display: flex;
   justify-content: space-between;
-  gap: 60px;
+  gap: 47px;
 }
 .about-section .img-content {
   display: flex;
   flex-grow: 1;
-  max-width: 600px;
+  max-width: 526px;
   position: relative;
-  gap: 30px;
+  gap: 24px;
   margin-top: 35px;
 }
 .about-section .img-content .img-content-one {
@@ -2980,7 +2980,7 @@ select.form-select option {
 .about-section .img-content .img-content-two .circle {
   position: absolute;
   z-index: 13;
-  right: 150px;
+  right: 184px;
 }
 .about-section .img-content .img-content-two .img-content-about_2 {
   position: absolute;
@@ -3005,7 +3005,7 @@ select.form-select option {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 155px;
+    gap: 126px;
   }
   .about-section .img-content {
     bottom: 0;
