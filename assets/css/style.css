@@ -2797,6 +2797,9 @@ select.form-select option {
 .bim-calculation .bmi-result {
     margin-top: 20px; /* Space above result */
 }
+button#calculate-bmi {
+  margin-bottom: 15px;
+}
 
 @media (max-width: 768px) {
     .bim-calculation .col-md-2 {
