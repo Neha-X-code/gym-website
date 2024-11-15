@@ -17,44 +17,45 @@
     <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
-       /* Adjusting the margins and paddings for a more compact form */
-.bim-calculator-from .form-control,
-.bim-calculator-from .form-select {
-    padding: 8px;
-    margin-bottom: 10px;
-}
+         .feature-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
 
-.bim-calculation img.bim-calculator-img {
-    margin-bottom: 20px;
-}
+  .instagram-grid {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+  }
 
-.ak-height-150, .ak-height-lg-80, .ak-height-35, .ak-height-lg-20 {
-    height: 20px !important;
-}
+  .instagram-embed-wrapper {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
 
-/* Styles for the toggle button */
-#toggle-bmi-form {
-    margin-bottom: 20px;
-    cursor: pointer;
-}
+  .instagram-media {
+    margin: 0 !important;
+    width: 100% !important;
+    min-width: unset !important;
+  }
 
-/* Styles for the BMI result */
-.bmi-result {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: none;
-    opacity: 1;
-    transition: opacity 1s ease-out;
-}
+  /* Mobile layout: one column */
+  @media (max-width: 767px) {
+    .instagram-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 
+  /* Desktop layout: three columns */
+  @media (min-width: 768px) {
+    .instagram-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
     </style>
 </head>
 
@@ -766,690 +767,25 @@
     <div class="ak-height-135 ak-height-lg-80"></div>
     <section>
         <div class="feature-content">
-            <div class="row row-cols-1 row-cols-md-2 feature g-0">
-                <div class="feature-card">
-                    <a class='normal' href='index.html#'>
-                        <img src="assets/img/feature_1.png" class="feature-card-img" alt="...">
-                        <div class="text-content">
-                            <h3>Customer-Centric Approach</h3>
-                            <p>At Ever Youth Gym, your fitness journey is our top priority. We offer personalized support and tailored programs to ensure you receive the attention and guidance needed to achieve your unique goals.</p>
-                        </div>
-                    </a>
-                    <div class='info'>
-                        <div class="hover-content">
-                            <h3>Customer-Centric Approach</h3>
-                            <p>At Ever Youth Gym, your fitness journey is our top priority. We offer personalized support and tailored programs to ensure you receive the attention and guidance needed to achieve your unique goals.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <a class='normal' href='index.html#'>
-                        <img src="assets/img/feature_2.png" class="feature-card-img" alt="...">
-                        <div class="text-content">
-                            <h3>Health and Wellness</h3>
-                            <p>Experience a holistic approach to health and wellness with us. Our integrated programs focus on enhancing your physical fitness while promoting overall well-being, helping you feel your best both inside and out.</p>
-                        </div>
-                    </a>
-                    <div class='info'>
-                        <div class="hover-content">
-                            <h3>Health and Wellness</h3>
-                            <p>Experience a holistic approach to health and wellness with us. Our integrated programs focus on enhancing your physical fitness while promoting overall well-being, helping you feel your best both inside and out.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <a class='normal' href='index.html#'>
-                        <img src="assets/img/feature_3.png" class="feature-card-img" alt="...">
-                        <div class="text-content">
-                            <h3>Expert Trainers</h3>
-                            <p>Meet our passionate team of expert trainers who are dedicated to your success. With their extensive knowledge and motivating approach, you’ll have the support you need to push past your limits and achieve your fitness aspirations.</p>
-                        </div>
-                    </a>
-                    <div class='info'>
-                        <div class="hover-content">
-                            <h3>Expert Trainers</h3>
-                            <p>Meet our passionate team of expert trainers who are dedicated to your success. With their extensive knowledge and motivating approach, you’ll have the support you need to push past your limits and achieve your fitness aspirations.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <a class='normal' href='index.html#'>
-                        <img src="assets/img/feature_4.png" class="feature-card-img" alt="...">
-                        <div class="text-content">
-                            <h3>Quality Facilities, Equipment </h3>
-                            <p>Train in style with our top-of-the-line equipment and modern facilities. At Ever Youth Gym, we provide a clean, safe, and inspiring environment where you can enjoy every workout and reach your fitness goals with confidence.</p>
-                        </div>
-                    </a>
-                    <div class='info'>
-                        <div class="hover-content">
-                            <h3>Quality Facilities, Equipment </h3>
-                            <p>Train in style with our top-of-the-line equipment and modern facilities. At Ever Youth Gym, we provide a clean, safe, and inspiring environment where you can enjoy every workout and reach your fitness goals with confidence.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="instagram-grid">
+              <div class="instagram-embed-wrapper">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C_vOFsNSHJP/" data-instgrm-version="14">
+                </blockquote>
+              </div>
+              <div class="instagram-embed-wrapper">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DBBjQrdySpw/" data-instgrm-version="14">
+                </blockquote>
+              </div>
+              <div class="instagram-embed-wrapper">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DBGxOj2yqiO/" data-instgrm-version="14">
+                </blockquote>
+              </div>
             </div>
-            <!-- <div class="feature-video">
-                <img src="assets/img/video-bg-1.png" alt="Scrolling Image" class="scrolling-image" id="scrollingImage">
-                <a href="https://www.youtube.com/watch?v=xCXQBn2JUbc"
-                    class="ak-video-block ak-style1 ak-video-open type_2">
-                    <span class="ak-heartbeat-btn">
-                        <span></span>
-                    </span>
-                </a>
-            </div> -->
-            <div class="feature-video">
-                <img src="assets/img/video-bg-1.png" alt="Scrolling Image" class="scrolling-image" id="scrollingImage">
-                <div class="instagram-embed-container">
-                    <blockquote class="instagram-media" 
-                        data-instgrm-permalink="https://www.instagram.com/reel/DBBjQrdySpw/"
-                        data-instgrm-version="14"
-                        style="
-                            background:#FFF; 
-                            border:0; 
-                            border-radius:3px; 
-                            box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); 
-                            margin: 0; 
-                            padding:0; 
-                            width:100%; 
-                            min-width:326px;">
-                    </blockquote>
-                </div>
-                <script async src="//www.instagram.com/embed.js"></script>
-            </div>
-            
-            <style>
-            .feature-video {
-                position: relative;
-                width: 100%;
-                overflow: hidden;
-            }
-            
-            .instagram-embed-container {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 100%;
-                max-width: 540px;
-                z-index: 2;
-            }
-            
-            .scrolling-image {
-                width: 100%;
-                height: auto;
-                display: block;
-            }
-            </style>
-            
-            
-        </div>
+          </div>
     </section>
+
     <!-- End feature and video -->
 
-    <!-- Start Testimonial-->
-    <!--<div class="ak-height-135 ak-height-lg-80"></div>
-    <section class="container">
-        <div class="testimonial">
-            <div class="testimonial-img image-hover-animation animation-2s" data-aos="fade-right">
-                <img src="assets/img/testimonial.jpg" alt="...">
-            </div>
-            <div class="testimonial-info" data-aos="fade-left">
-                <h2 class="stroke-text" data-text="Feedback!">
-                    Feedback
-                </h2>
-                <div class="slider testimonial-slider-home">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="testimonial-content">
-                                <div class="client">
-                                    <div class="primary-color-border-horizontal"></div>
-                                    <h5 class="title">Roberts Bush</h5>
-                                    <p class="sub-title">From Canada</p>
-                                </div>
-                                <div class="desp">
-                                    <div class="video-btn">
-                                        <div class="d-flex gap-2 align-items-center">
-                                            <a href="https://www.youtube.com/watch?v=xCXQBn2JUbc"
-                                                class="ak-video-block ak-style1 ak-video-open type_2">
-                                                <span class="ak-heartbeat-btn">
-                                                    <span></span>
-                                                </span>
-                                            </a>
-                                            <p class="ak-secondary-font ak-font-18">Video Feedback</p>
-                                        </div>
-                                    </div>
-                                    <p>
-                                        "Joining this gym changed my life. The trainers are top-notch, the classes are
-                                        diverse and challenging, and the community is like family. I've never felt
-                                        stronger or more
-                                        confident.Highly recommend! and the community is like family. I've never felt
-                                        stronger or more
-                                        confident. Highly recommend, they are awesome!"
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial-content">
-                                <div class="client">
-                                    <div class="primary-color-border-horizontal"></div>
-                                    <h5 class="title">Jane Smith</h5>
-                                    <p class="sub-title">Toronto, Canada</p>
-                                </div>
-                                <div class="desp">
-                                    <div class="video-btn">
-                                        <div class="d-flex gap-2 align-items-center">
-                                            <a href="https://www.youtube.com/watch?v=xCXQBn2JUbc"
-                                                class="ak-video-block ak-style1 ak-video-open type_2">
-                                                <span class="ak-heartbeat-btn">
-                                                    <span></span>
-                                                </span>
-                                            </a>
-                                            <p class="ak-secondary-font ak-font-18">Video Feedback</p>
-                                        </div>
-                                    </div>
-                                    <p>
-                                        "This gym has transformed my fitness journey. The trainers are experienced, the
-                                        classes are varied, and the community is supportive. I've never felt healthier
-                                        or more motivated. Highly recommend!, and the community is welcoming. I've never
-                                        been more fit or motivated. Absolutely recommend"
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    <!-- End Testimonial-->
-
-    <!-- Start Pricing Calculator -->
-    <!--<div class="ak-height-135 ak-height-lg-80"></div>
-    <section class="pricing-calculator">
-        <div class="ak-height-100 ak-height-lg-80"></div>
-        <div class="container">
-            <div class="calculator-form" data-aos="fade-down">
-                <form>
-                    <div class="from-inputs">
-                        <div class="type_1">
-                            <label for="height" class="form-label">Your Height*</label>
-                            <input type="text" name="height" id="height" placeholder="Height...">
-                        </div>
-                        <div class="type_1">
-                            <label for="weight" class="form-label">Weight*</label>
-                            <input type="text" name="weight" id="weight" placeholder="Weight...">
-                        </div>
-                        <div class="type_1">
-                            <label for="age" class="form-label">Your Age*</label>
-                            <input type="text" name="age" id="age" placeholder="Age...">
-                        </div>
-                    </div>
-
-                    <div class="from-inputs">
-                        <div class="type_1">
-                            <label class="form-label">Select Gender*</label>
-                            <select class="form-select select-input-customize" aria-label="Default select example">
-                                <option selected>Gender...</option>
-                                <option value="1">Male</option>
-                                <option value="2">Female</option>
-                            </select>
-                        </div>
-                        <div class="type_1">
-                            <label class="form-label">I Want</label>
-                            <select class="form-select select-input-customize" aria-label="Default select example">
-                                <option selected>I Want (Weight Loss)...</option>
-                                <option value="Weight Loss">Weight Loss</option>
-                                <option value="Weight Gain">Weight Gain</option>
-                            </select>
-                        </div>
-                        <div class="type_1">
-                            <button class="button-primary type_2">
-                                CALCULATE
-                                <span class="icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20"
-                                        fill="none">
-                                        <g clip-path="url(#clip0_1967_2504)">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M0.585938 19.4276L9.58594 10.4276L0.585938 1.42755H6.99067L15.9907 10.4276L6.99067 19.4276H0.585938Z"
-                                                fill="white" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_1967_2504">
-                                                <rect width="16" height="19" fill="white"
-                                                    transform="translate(0 0.989563)" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="ak-height-80 ak-height-lg-50"></div>
-
-            <div class="package-content add-active-class-content">
-                <img src="assets/img/package-img.jpg" class="package-img" alt="..." data-aos="fade-up"
-                    data-aos-duration="400">
-
-                <div class="package">
-                    <div class="package-one type2" data-aos="fade-up" data-aos-duration="500">
-                        <div class="title">
-                            <h5> $30</h5>
-                            <h3>Basic Package</h3>
-                            <h6>Monthly</h6>
-                        </div>
-                        <div class="border-horizontal"></div>
-                        <ul class="package-list">
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                    fill="none">
-                                    <rect x="0.0420837" y="0.742188" width="26" height="26" fill="white"
-                                        fill-opacity="0.1" />
-                                    <path
-                                        d="M7.40184 12.6533C7.12571 12.6541 6.85543 12.7331 6.62228 12.881C6.38914 13.029 6.20265 13.24 6.0844 13.4895C5.96614 13.739 5.92095 14.017 5.95406 14.2911C5.98717 14.5652 6.09722 14.8244 6.27147 15.0386L9.98624 19.5892C10.1187 19.7537 10.2885 19.8842 10.4815 19.9698C10.6745 20.0555 10.8851 20.0939 11.096 20.0818C11.5469 20.0576 11.9539 19.8164 12.2135 19.4198L19.93 6.99236C19.9313 6.9903 19.9326 6.98824 19.9339 6.9862C20.0063 6.87504 19.9829 6.65473 19.8334 6.51633C19.7924 6.47832 19.744 6.44912 19.6912 6.43053C19.6384 6.41193 19.5824 6.40434 19.5266 6.40821C19.4708 6.41208 19.4164 6.42734 19.3667 6.45304C19.317 6.47874 19.2731 6.51434 19.2377 6.55765C19.2349 6.56106 19.232 6.56441 19.2291 6.56771L11.4469 15.3604C11.4173 15.3939 11.3813 15.4212 11.3411 15.4406C11.3009 15.46 11.2572 15.4713 11.2125 15.4737C11.1679 15.4761 11.1233 15.4696 11.0812 15.4547C11.0391 15.4397 11.0004 15.4165 10.9674 15.3864L8.38458 13.0361C8.11634 12.7902 7.76574 12.6536 7.40184 12.6533Z"
-                                        fill="white" />
-                                </svg>
-                                <span>Gym facilities during hours</span>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                    fill="none">
-                                    <rect x="0.0420837" y="0.742188" width="26" height="26" fill="white"
-                                        fill-opacity="0.1" />
-                                    <path
-                                        d="M7.40184 12.6533C7.12571 12.6541 6.85543 12.7331 6.62228 12.881C6.38914 13.029 6.20265 13.24 6.0844 13.4895C5.96614 13.739 5.92095 14.017 5.95406 14.2911C5.98717 14.5652 6.09722 14.8244 6.27147 15.0386L9.98624 19.5892C10.1187 19.7537 10.2885 19.8842 10.4815 19.9698C10.6745 20.0555 10.8851 20.0939 11.096 20.0818C11.5469 20.0576 11.9539 19.8164 12.2135 19.4198L19.93 6.99236C19.9313 6.9903 19.9326 6.98824 19.9339 6.9862C20.0063 6.87504 19.9829 6.65473 19.8334 6.51633C19.7924 6.47832 19.744 6.44912 19.6912 6.43053C19.6384 6.41193 19.5824 6.40434 19.5266 6.40821C19.4708 6.41208 19.4164 6.42734 19.3667 6.45304C19.317 6.47874 19.2731 6.51434 19.2377 6.55765C19.2349 6.56106 19.232 6.56441 19.2291 6.56771L11.4469 15.3604C11.4173 15.3939 11.3813 15.4212 11.3411 15.4406C11.3009 15.46 11.2572 15.4713 11.2125 15.4737C11.1679 15.4761 11.1233 15.4696 11.0812 15.4547C11.0391 15.4397 11.0004 15.4165 10.9674 15.3864L8.38458 13.0361C8.11634 12.7902 7.76574 12.6536 7.40184 12.6533Z"
-                                        fill="white" />
-                                </svg>
-                                <span>Use of cardio & strength equipment</span>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                    fill="none">
-                                    <rect x="0.0420837" y="0.742188" width="26" height="26" fill="white"
-                                        fill-opacity="0.1" />
-                                    <path
-                                        d="M7.40184 12.6533C7.12571 12.6541 6.85543 12.7331 6.62228 12.881C6.38914 13.029 6.20265 13.24 6.0844 13.4895C5.96614 13.739 5.92095 14.017 5.95406 14.2911C5.98717 14.5652 6.09722 14.8244 6.27147 15.0386L9.98624 19.5892C10.1187 19.7537 10.2885 19.8842 10.4815 19.9698C10.6745 20.0555 10.8851 20.0939 11.096 20.0818C11.5469 20.0576 11.9539 19.8164 12.2135 19.4198L19.93 6.99236C19.9313 6.9903 19.9326 6.98824 19.9339 6.9862C20.0063 6.87504 19.9829 6.65473 19.8334 6.51633C19.7924 6.47832 19.744 6.44912 19.6912 6.43053C19.6384 6.41193 19.5824 6.40434 19.5266 6.40821C19.4708 6.41208 19.4164 6.42734 19.3667 6.45304C19.317 6.47874 19.2731 6.51434 19.2377 6.55765C19.2349 6.56106 19.232 6.56441 19.2291 6.56771L11.4469 15.3604C11.4173 15.3939 11.3813 15.4212 11.3411 15.4406C11.3009 15.46 11.2572 15.4713 11.2125 15.4737C11.1679 15.4761 11.1233 15.4696 11.0812 15.4547C11.0391 15.4397 11.0004 15.4165 10.9674 15.3864L8.38458 13.0361C8.11634 12.7902 7.76574 12.6536 7.40184 12.6533Z"
-                                        fill="white" />
-                                </svg>
-                                <span>Access to locker rooms</span>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                    fill="none">
-                                    <rect x="0.0420837" y="0.742188" width="26" height="26" fill="white"
-                                        fill-opacity="0.1" />
-                                    <path
-                                        d="M7.40184 12.6533C7.12571 12.6541 6.85543 12.7331 6.62228 12.881C6.38914 13.029 6.20265 13.24 6.0844 13.4895C5.96614 13.739 5.92095 14.017 5.95406 14.2911C5.98717 14.5652 6.09722 14.8244 6.27147 15.0386L9.98624 19.5892C10.1187 19.7537 10.2885 19.8842 10.4815 19.9698C10.6745 20.0555 10.8851 20.0939 11.096 20.0818C11.5469 20.0576 11.9539 19.8164 12.2135 19.4198L19.93 6.99236C19.9313 6.9903 19.9326 6.98824 19.9339 6.9862C20.0063 6.87504 19.9829 6.65473 19.8334 6.51633C19.7924 6.47832 19.744 6.44912 19.6912 6.43053C19.6384 6.41193 19.5824 6.40434 19.5266 6.40821C19.4708 6.41208 19.4164 6.42734 19.3667 6.45304C19.317 6.47874 19.2731 6.51434 19.2377 6.55765C19.2349 6.56106 19.232 6.56441 19.2291 6.56771L11.4469 15.3604C11.4173 15.3939 11.3813 15.4212 11.3411 15.4406C11.3009 15.46 11.2572 15.4713 11.2125 15.4737C11.1679 15.4761 11.1233 15.4696 11.0812 15.4547C11.0391 15.4397 11.0004 15.4165 10.9674 15.3864L8.38458 13.0361C8.11634 12.7902 7.76574 12.6536 7.40184 12.6533Z"
-                                        fill="white" />
-                                </svg>
-                                <span>Discounted rates on group fitness</span>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                    fill="none">
-                                    <rect x="0.0420837" y="0.742188" width="26" height="26" fill="white"
-                                        fill-opacity="0.1" />
-                                    <path
-                                        d="M7.40184 12.6533C7.12571 12.6541 6.85543 12.7331 6.62228 12.881C6.38914 13.029 6.20265 13.24 6.0844 13.4895C5.96614 13.739 5.92095 14.017 5.95406 14.2911C5.98717 14.5652 6.09722 14.8244 6.27147 15.0386L9.98624 19.5892C10.1187 19.7537 10.2885 19.8842 10.4815 19.9698C10.6745 20.0555 10.8851 20.0939 11.096 20.0818C11.5469 20.0576 11.9539 19.8164 12.2135 19.4198L19.93 6.99236C19.9313 6.9903 19.9326 6.98824 19.9339 6.9862C20.0063 6.87504 19.9829 6.65473 19.8334 6.51633C19.7924 6.47832 19.744 6.44912 19.6912 6.43053C19.6384 6.41193 19.5824 6.40434 19.5266 6.40821C19.4708 6.41208 19.4164 6.42734 19.3667 6.45304C19.317 6.47874 19.2731 6.51434 19.2377 6.55765C19.2349 6.56106 19.232 6.56441 19.2291 6.56771L11.4469 15.3604C11.4173 15.3939 11.3813 15.4212 11.3411 15.4406C11.3009 15.46 11.2572 15.4713 11.2125 15.4737C11.1679 15.4761 11.1233 15.4696 11.0812 15.4547C11.0391 15.4397 11.0004 15.4165 10.9674 15.3864L8.38458 13.0361C8.11634 12.7902 7.76574 12.6536 7.40184 12.6533Z"
-                                        fill="white" />
-                                </svg>
-                                <span>Goal setting session with a trainer</span>
-                            </li>
-
-                        </ul>
-                        <a class="button-primary style_2 ak-center" href="index.html#">
-                            CHOOSE PLAN
-                            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20"
-                                    viewBox="0 0 16 20" fill="none">
-                                    <g clip-path="url(#clip0_1735_935)">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M0.585999 18.938L9.586 9.93799L0.585999 0.937988H6.99073L15.9907 9.93799L6.99073 18.938H0.585999Z"
-                                            fill="white" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1735_34593554">
-                                            <rect width="16" height="19" fill="white" transform="translate(0 0.5)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="package-two type2" data-aos="fade-up" data-aos-duration="600">
-                        <div class="title">
-                            <h5> $180</h5>
-                            <h3>ULTIMATE BOST</h3>
-                            <h6>Monthly</h6>
-                        </div>
-                        <div class="border-horizontal"></div>
-                        <ul class="package-list">
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                    fill="none">
-                                    <rect x="0.0420837" y="0.742188" width="26" height="26" fill="white"
-                                        fill-opacity="0.1" />
-                                    <path
-                                        d="M7.40184 12.6533C7.12571 12.6541 6.85543 12.7331 6.62228 12.881C6.38914 13.029 6.20265 13.24 6.0844 13.4895C5.96614 13.739 5.92095 14.017 5.95406 14.2911C5.98717 14.5652 6.09722 14.8244 6.27147 15.0386L9.98624 19.5892C10.1187 19.7537 10.2885 19.8842 10.4815 19.9698C10.6745 20.0555 10.8851 20.0939 11.096 20.0818C11.5469 20.0576 11.9539 19.8164 12.2135 19.4198L19.93 6.99236C19.9313 6.9903 19.9326 6.98824 19.9339 6.9862C20.0063 6.87504 19.9829 6.65473 19.8334 6.51633C19.7924 6.47832 19.744 6.44912 19.6912 6.43053C19.6384 6.41193 19.5824 6.40434 19.5266 6.40821C19.4708 6.41208 19.4164 6.42734 19.3667 6.45304C19.317 6.47874 19.2731 6.51434 19.2377 6.55765C19.2349 6.56106 19.232 6.56441 19.2291 6.56771L11.4469 15.3604C11.4173 15.3939 11.3813 15.4212 11.3411 15.4406C11.3009 15.46 11.2572 15.4713 11.2125 15.4737C11.1679 15.4761 11.1233 15.4696 11.0812 15.4547C11.0391 15.4397 11.0004 15.4165 10.9674 15.3864L8.38458 13.0361C8.11634 12.7902 7.76574 12.6536 7.40184 12.6533Z"
-                                        fill="white" />
-                                </svg>
-                                <span>Gym facilities during hours</span>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                    fill="none">
-                                    <rect x="0.0420837" y="0.742188" width="26" height="26" fill="white"
-                                        fill-opacity="0.1" />
-                                    <path
-                                        d="M7.40184 12.6533C7.12571 12.6541 6.85543 12.7331 6.62228 12.881C6.38914 13.029 6.20265 13.24 6.0844 13.4895C5.96614 13.739 5.92095 14.017 5.95406 14.2911C5.98717 14.5652 6.09722 14.8244 6.27147 15.0386L9.98624 19.5892C10.1187 19.7537 10.2885 19.8842 10.4815 19.9698C10.6745 20.0555 10.8851 20.0939 11.096 20.0818C11.5469 20.0576 11.9539 19.8164 12.2135 19.4198L19.93 6.99236C19.9313 6.9903 19.9326 6.98824 19.9339 6.9862C20.0063 6.87504 19.9829 6.65473 19.8334 6.51633C19.7924 6.47832 19.744 6.44912 19.6912 6.43053C19.6384 6.41193 19.5824 6.40434 19.5266 6.40821C19.4708 6.41208 19.4164 6.42734 19.3667 6.45304C19.317 6.47874 19.2731 6.51434 19.2377 6.55765C19.2349 6.56106 19.232 6.56441 19.2291 6.56771L11.4469 15.3604C11.4173 15.3939 11.3813 15.4212 11.3411 15.4406C11.3009 15.46 11.2572 15.4713 11.2125 15.4737C11.1679 15.4761 11.1233 15.4696 11.0812 15.4547C11.0391 15.4397 11.0004 15.4165 10.9674 15.3864L8.38458 13.0361C8.11634 12.7902 7.76574 12.6536 7.40184 12.6533Z"
-                                        fill="white" />
-                                </svg>
-                                <span>Use of cardio & strength equipment</span>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                    fill="none">
-                                    <rect x="0.0420837" y="0.742188" width="26" height="26" fill="white"
-                                        fill-opacity="0.1" />
-                                    <path
-                                        d="M7.40184 12.6533C7.12571 12.6541 6.85543 12.7331 6.62228 12.881C6.38914 13.029 6.20265 13.24 6.0844 13.4895C5.96614 13.739 5.92095 14.017 5.95406 14.2911C5.98717 14.5652 6.09722 14.8244 6.27147 15.0386L9.98624 19.5892C10.1187 19.7537 10.2885 19.8842 10.4815 19.9698C10.6745 20.0555 10.8851 20.0939 11.096 20.0818C11.5469 20.0576 11.9539 19.8164 12.2135 19.4198L19.93 6.99236C19.9313 6.9903 19.9326 6.98824 19.9339 6.9862C20.0063 6.87504 19.9829 6.65473 19.8334 6.51633C19.7924 6.47832 19.744 6.44912 19.6912 6.43053C19.6384 6.41193 19.5824 6.40434 19.5266 6.40821C19.4708 6.41208 19.4164 6.42734 19.3667 6.45304C19.317 6.47874 19.2731 6.51434 19.2377 6.55765C19.2349 6.56106 19.232 6.56441 19.2291 6.56771L11.4469 15.3604C11.4173 15.3939 11.3813 15.4212 11.3411 15.4406C11.3009 15.46 11.2572 15.4713 11.2125 15.4737C11.1679 15.4761 11.1233 15.4696 11.0812 15.4547C11.0391 15.4397 11.0004 15.4165 10.9674 15.3864L8.38458 13.0361C8.11634 12.7902 7.76574 12.6536 7.40184 12.6533Z"
-                                        fill="white" />
-                                </svg>
-                                <span>Access to locker rooms</span>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                    fill="none">
-                                    <rect x="0.0420837" y="0.742188" width="26" height="26" fill="white"
-                                        fill-opacity="0.1" />
-                                    <path
-                                        d="M7.40184 12.6533C7.12571 12.6541 6.85543 12.7331 6.62228 12.881C6.38914 13.029 6.20265 13.24 6.0844 13.4895C5.96614 13.739 5.92095 14.017 5.95406 14.2911C5.98717 14.5652 6.09722 14.8244 6.27147 15.0386L9.98624 19.5892C10.1187 19.7537 10.2885 19.8842 10.4815 19.9698C10.6745 20.0555 10.8851 20.0939 11.096 20.0818C11.5469 20.0576 11.9539 19.8164 12.2135 19.4198L19.93 6.99236C19.9313 6.9903 19.9326 6.98824 19.9339 6.9862C20.0063 6.87504 19.9829 6.65473 19.8334 6.51633C19.7924 6.47832 19.744 6.44912 19.6912 6.43053C19.6384 6.41193 19.5824 6.40434 19.5266 6.40821C19.4708 6.41208 19.4164 6.42734 19.3667 6.45304C19.317 6.47874 19.2731 6.51434 19.2377 6.55765C19.2349 6.56106 19.232 6.56441 19.2291 6.56771L11.4469 15.3604C11.4173 15.3939 11.3813 15.4212 11.3411 15.4406C11.3009 15.46 11.2572 15.4713 11.2125 15.4737C11.1679 15.4761 11.1233 15.4696 11.0812 15.4547C11.0391 15.4397 11.0004 15.4165 10.9674 15.3864L8.38458 13.0361C8.11634 12.7902 7.76574 12.6536 7.40184 12.6533Z"
-                                        fill="white" />
-                                </svg>
-                                <span>Discounted rates on group fitness</span>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"
-                                    fill="none">
-                                    <rect x="0.0420837" y="0.742188" width="26" height="26" fill="white"
-                                        fill-opacity="0.1" />
-                                    <path
-                                        d="M7.40184 12.6533C7.12571 12.6541 6.85543 12.7331 6.62228 12.881C6.38914 13.029 6.20265 13.24 6.0844 13.4895C5.96614 13.739 5.92095 14.017 5.95406 14.2911C5.98717 14.5652 6.09722 14.8244 6.27147 15.0386L9.98624 19.5892C10.1187 19.7537 10.2885 19.8842 10.4815 19.9698C10.6745 20.0555 10.8851 20.0939 11.096 20.0818C11.5469 20.0576 11.9539 19.8164 12.2135 19.4198L19.93 6.99236C19.9313 6.9903 19.9326 6.98824 19.9339 6.9862C20.0063 6.87504 19.9829 6.65473 19.8334 6.51633C19.7924 6.47832 19.744 6.44912 19.6912 6.43053C19.6384 6.41193 19.5824 6.40434 19.5266 6.40821C19.4708 6.41208 19.4164 6.42734 19.3667 6.45304C19.317 6.47874 19.2731 6.51434 19.2377 6.55765C19.2349 6.56106 19.232 6.56441 19.2291 6.56771L11.4469 15.3604C11.4173 15.3939 11.3813 15.4212 11.3411 15.4406C11.3009 15.46 11.2572 15.4713 11.2125 15.4737C11.1679 15.4761 11.1233 15.4696 11.0812 15.4547C11.0391 15.4397 11.0004 15.4165 10.9674 15.3864L8.38458 13.0361C8.11634 12.7902 7.76574 12.6536 7.40184 12.6533Z"
-                                        fill="white" />
-                                </svg>
-                                <span>Goal setting session with a trainer</span>
-                            </li>
-
-                        </ul>
-                        <a href="index.html#" class="button-primary style_2 ak-center">
-                            CHOOSE PLAN
-                            <span class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20"
-                                    fill="none">
-                                    <g clip-path="url(#clip0_1735_935)">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M0.585999 18.938L9.586 9.93799L0.585999 0.937988H6.99073L15.9907 9.93799L6.99073 18.938H0.585999Z"
-                                            fill="white" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1735_9354">
-                                            <rect width="16" height="19" fill="white" transform="translate(0 0.5)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="ak-height-135 ak-height-lg-80"></div>
-    </section>-->
-    <!-- End Pricing Calculator -->
-
-    <!-- Start Blog-->
-    <!-- <div class="ak-height-135 ak-height-lg-80"></div>
-    <section class="container">
-        <div class="section-heading style-1 type-1" data-aos="zoom-out">
-            <div class="section-subtitle">Latest Post</div>
-            <h2 class="section-title">
-                Latest Post & Articles
-            </h2>
-        </div>
-        <div class="ak-height-50 ak-height-lg-40"></div>
-        <div class="latest-post">
-            <div class="post-card style1" data-aos="fade-up">
-                <div class="post-content">
-                    <div class="post-img">
-                        <img src="assets/img/post_1.jpg" alt="...">
-                    </div>
-                    <div class="post-info">
-                        <a class="post-title" href="blog-details.html">
-                            Fitness Potential: Expert Tips for Maximizing Your Gym Experience
-                        </a>
-                        <p class="post-desp">
-                            Are you ready to take your fitness journey to the next level? Whether you're...
-                        </p>
-                    </div>
-                </div>
-                <div class="post-btn">
-                    <a href="blog-details.html" class="post-btn-link">
-                        <span>Read more</span>
-                        <span class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" viewBox="0 0 12 15"
-                                fill="none">
-                                <g clip-path="url(#clip0_1823_142)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M0.642334 14.1001L7.27392 7.46849L0.642334 0.836914H5.36161L11.9932 7.46849L5.36161 14.1001H0.642334Z"
-                                        fill="white" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_1823_142gf">
-                                        <rect width="11.7895" height="14" fill="white"
-                                            transform="translate(0.210571 0.51416)" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div class="post-card style1" data-aos="fade-up">
-                <div class="post-content">
-                    <div class="post-img">
-                        <img src="assets/img/post_2.jpg" alt="...">
-                    </div>
-                    <div class="post-info">
-                        <a class="post-title" href="blog-details.html">
-                            A Beginner's Guide to Starting Your Fitness Journey at the Gym
-                        </a>
-                        <p class="post-desp">
-                            Are you ready to take your fitness journey to the next level? Whether you're...
-                        </p>
-                    </div>
-                </div>
-                <div class="post-btn">
-                    <a href="blog-details.html" class="post-btn-link">
-                        <span>Read more</span>
-                        <span class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" viewBox="0 0 12 15"
-                                fill="none">
-                                <g clip-path="url(#clip0_1823_142)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M0.642334 14.1001L7.27392 7.46849L0.642334 0.836914H5.36161L11.9932 7.46849L5.36161 14.1001H0.642334Z"
-                                        fill="white" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_1823_14232">
-                                        <rect width="11.7895" height="14" fill="white"
-                                            transform="translate(0.210571 0.51416)" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div class="post-card style1" data-aos="fade-up">
-                <div class="post-content">
-                    <div class="post-img">
-                        <img src="assets/img/post_3.jpg" alt="...">
-                    </div>
-                    <div class="post-info">
-                        <a class="post-title" href="blog-details.html">
-                            Maximize Your Workout: 10 Exercises for Building Lean Muscle Mass
-                        </a>
-                        <p class="post-desp">
-                            Are you ready to take your fitness journey to the next level? Whether you're...
-                        </p>
-                    </div>
-                </div>
-                <div class="post-btn">
-                    <a href="blog-details.html" class="post-btn-link">
-                        <span>Read more</span>
-                        <span class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" viewBox="0 0 12 15"
-                                fill="none">
-                                <g clip-path="url(#clip0_1823_142)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M0.642334 14.1001L7.27392 7.46849L0.642334 0.836914H5.36161L11.9932 7.46849L5.36161 14.1001H0.642334Z"
-                                        fill="white" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_1823_14435462">
-                                        <rect width="11.7895" height="14" fill="white"
-                                            transform="translate(0.210571 0.51416)" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- End Blog-->
-
-    <!-- Start Partner Client -->
-    <!-- <div class="ak-height-135 ak-height-lg-80"></div>
-    <div class="container">
-        <div class="partner-client">
-            <div class="title">
-                <h1 class="stroke-text">
-                    Trusted <br> Client
-                </h1>
-            </div>
-            <div class="slider partner-client-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="assets/img/pc_1.png" alt="...">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/pc_2.png" alt="...">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/pc_3.png" alt="...">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/pc_4.png" alt="...">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/pc_1.png" alt="...">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/pc_2.png" alt="...">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/pc_3.png" alt="...">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/pc_4.png" alt="...">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- End Partner Client -->
-
-    <!-- Start Subscribe Email-->
-    <!--<div class="ak-height-135 ak-height-lg-80"></div>
-    <div class="container">
-        <div class="subscribe-email">
-            <div class="subscribe-content">
-                <h3 class="subscribe-title">SUBSCRIBE TO OUR NEWSLETTER</h3>
-                <p class="subscribe-desp ak-font-18">Whether you're a beginner or a seasoned fitness enthusiast
-                </p>
-            </div>
-            <form class="subscribe-form">
-                <input type="text" name="email" id="email" placeholder="Enter your email..." class="email-input">
-                <button type="submit" class="submit-btn">
-                    <span class="send">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                            <path
-                                d="M23.0345 3.91676C23.5566 2.42362 22.157 0.976718 20.7126 1.51775L3.06022 8.11754C1.61105 8.65982 1.43579 10.704 2.76894 11.5024L8.40369 14.8748L13.4353 9.67315C13.6633 9.44555 13.9686 9.31961 14.2855 9.32246C14.6024 9.3253 14.9055 9.45671 15.1296 9.68837C15.3537 9.92004 15.4808 10.2334 15.4836 10.561C15.4863 10.8887 15.3645 11.2043 15.1444 11.4399L10.1127 16.6415L13.3761 22.4667C14.1472 23.8448 16.1246 23.6624 16.6491 22.1655L23.0345 3.91676Z"
-                                fill="white" />
-                        </svg>
-                    </span>
-                </button>
-            </form>
-        </div>
-    </div>-->
-    <!-- End Subscribe Email -->
-    <!-- <div class="bim-calculation" data-aos="fade-up">
-        <div class="ak-height-150 ak-height-lg-80"></div>
-        <div class="container">
-            <button class="button-primary" id="toggle-bmi-form">Show/Hide BMI Calculator</button>
-            <div class="col-md-12" id="bmi-form-container" style="display: none;">
-                <form id="bmi-form" class="row bim-calculator-form">
-                    <div class="col-md-12">
-                        <div class="row align-items-end">
-                            <div class="col-md-2">
-                                <label for="Height" class="label">Your Height (in cm)*</label>
-                                <input class="form-control style1 type2" id="Height" name="height" type="text" placeholder="Height...">
-                            </div>
-                            <div class="col-md-2">
-                                <label for="Weight" class="label">Your Weight (in kg)*</label>
-                                <input class="form-control style1 type2" id="Weight" name="weight" type="text" placeholder="Weight...">
-                            </div>
-                            <div class="col-md-2">
-                                <label for="Gender" class="label">Select Gender*</label>
-                                <select class="form-select style1 type2" id="Gender" name="gender" aria-label="Default select example">
-                                    <option selected>Gender...</option>
-                                    <option value="1">Male</option>
-                                    <option value="2">Female</option>
-                                </select>
-                            </div>
-                            <div class="col-md-2">
-                                <label for="Age" class="label">Your Age*</label>
-                                <input class="form-control style1 type2" id="Age" name="age" type="text" placeholder="Age...">
-                            </div>
-                            <div class="col-md-2">
-                                <button type="button" id="calculate-bmi" class="button-primary style_2">
-                                    CALCULATE
-                                    <span class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
-                                            <g clip-path="url(#clip0_1735_935)">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.585999 18.938L9.586 9.93799L0.585999 0.937988H6.99073L15.9907 9.93799L6.99073 18.938H0.585999Z" fill="white"></path>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_1735_34593554">
-                                                    <rect width="16" height="19" fill="white" transform="translate(0 0.5)"></rect>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bmi-result" id="bmi-result"></div>
-                </form>
-            </div>
-        </div>
-    </div> -->
-    
-    
 
     <!-- Start Footer -->
     <div class="ak-height-135 ak-height-lg-80"></div>
@@ -1547,6 +883,7 @@
     <!-- End Video Popup -->
 
     <!-- Script -->
+    <script async src="//www.instagram.com/embed.js"></script>
     <script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
     <script src="assets/js/plugins/aos.js"></script>
     <script src="assets/js/plugins/lightgallery.min.js"></script>
