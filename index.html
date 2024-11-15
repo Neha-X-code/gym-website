@@ -828,7 +828,7 @@
                     </div>
                 </div>
             </div>
-            <div class="feature-video">
+            <!-- <div class="feature-video">
                 <img src="assets/img/video-bg-1.png" alt="Scrolling Image" class="scrolling-image" id="scrollingImage">
                 <a href="https://www.youtube.com/watch?v=xCXQBn2JUbc"
                     class="ak-video-block ak-style1 ak-video-open type_2">
@@ -836,7 +836,50 @@
                         <span></span>
                     </span>
                 </a>
+            </div> -->
+            <div class="feature-video">
+                <img src="assets/img/video-bg-1.png" alt="Scrolling Image" class="scrolling-image" id="scrollingImage">
+                <div class="instagram-embed-container">
+                    <blockquote class="instagram-media" 
+                        data-instgrm-permalink="https://www.instagram.com/reel/DBBjQrdySpw/"
+                        data-instgrm-version="14"
+                        style="
+                            background:#FFF; 
+                            border:0; 
+                            border-radius:3px; 
+                            box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); 
+                            margin: 0; 
+                            padding:0; 
+                            width:100%; 
+                            min-width:326px;">
+                    </blockquote>
+                </div>
+                <script async src="//www.instagram.com/embed.js"></script>
             </div>
+            
+            <style>
+            .feature-video {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+            }
+            
+            .instagram-embed-container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                max-width: 540px;
+                z-index: 2;
+            }
+            
+            .scrolling-image {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+            </style>
             
             
         </div>
@@ -1487,7 +1530,7 @@
         </svg>
     </span>
     <!-- Start Video Popup -->
-    <div class="ak-video-popup">
+    <!-- <div class="ak-video-popup">
         <div class="ak-video-popup-overlay"></div>
         <div class="ak-video-popup-content">
             <div class="ak-video-popup-layer"></div>
@@ -1500,7 +1543,7 @@
                 <div class="ak-video-popup-close"></div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Video Popup -->
 
     <!-- Script -->
