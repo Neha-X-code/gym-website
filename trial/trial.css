@@ -1,0 +1,86 @@
+/* Basic Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000; /* Black background for theme */
+  color: #fff;
+}
+
+/* Container Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Scrollable Cards Section */
+.scroll-container {
+  display: flex;
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+/* Individual Scroll Section */
+.scroll-section {
+  flex: 1;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  background-color: #111; /* Slightly lighter black for contrast */
+}
+
+.scroll-card {
+  scroll-snap-align: start;
+  height: 33.33%; /* 3 cards fit the screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #333; /* Subtle border for card separation */
+  margin: 5px;
+  background-color: #222; /* Deep black for card */
+  color: #ffa500; /* Orange text for theme */
+  border-radius: 10px; /* Slight rounding for better aesthetics */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.scroll-card span {
+  font-size: 1rem;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #222;
+  color: #ffa500; /* Orange for theme consistency */
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .scroll-card {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .scroll-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .scroll-card span {
+    font-size: 0.8rem;
+  }
+}
