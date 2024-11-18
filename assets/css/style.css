@@ -5100,10 +5100,10 @@ button#calculate-bmi {
 }
 @media screen and (max-width: 991px) {
   .cta-content .cta-title-info {
-    gap: 25px;
+    gap: 20px;
   }
   .cta-content .cta-title-info > h1 {
-    font-size: 17vw;
+    font-size: 12vw;
   }
   .cta-content .cta-desp-info {
     text-align: center;
@@ -5206,7 +5206,7 @@ button#calculate-bmi {
   }
 
   .cta-title-info h1 {
-      font-size: 1.5rem; /* Reduce size for smaller screens */
+      font-size: 1.2rem; /* Reduce size for smaller screens */
   }
 
   .cta-desp-info p {
