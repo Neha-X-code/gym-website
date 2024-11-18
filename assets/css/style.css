@@ -5025,7 +5025,7 @@ button#calculate-bmi {
   padding: 0;
   height: inherit;
   margin: 0;
-  font-size: 255px;
+  font-size: 190px;
 }
 .cta-content .cta-desp-info {
   display: flex;
@@ -5190,4 +5190,39 @@ button#calculate-bmi {
 .contf{
   width: 400px;
   float: left;
+}
+
+
+@media (max-width: 768px) {
+  .cta-content {
+      flex-direction: column; /* Stack elements */
+      align-items: center;
+      text-align: center;
+  }
+
+  .cta-title-info, 
+  .cta-desp-info {
+      margin: 10px 0;
+  }
+
+  .cta-title-info h1 {
+      font-size: 1.5rem; /* Reduce size for smaller screens */
+  }
+
+  .cta-desp-info p {
+      font-size: 1.2rem;
+  }
+
+  
+}
+
+@media (max-width: 480px) {
+  .cta-title-info h1 {
+      font-size: 1rem; /* Further reduce size for very small screens */
+  }
+
+  .cta-desp-info p {
+      font-size: 1rem;
+  }
+
 }
