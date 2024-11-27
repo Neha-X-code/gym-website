@@ -57,6 +57,35 @@
     }
   }
     </style>
+    <style>
+        .loader {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    animation: spin 1s linear infinite;
+    display: inline-block; /* Ensure loader aligns within button */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Keep button width consistent */
+    padding: 10px; /* Maintain button padding */
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap; /* Prevent content wrapping */
+}
+
+
+    </style>
 </head>
 
 <body>
@@ -616,14 +645,16 @@
                 <div class="sidebar" id="sidebar">
                     <h4 class="form-title">BOOK A CLASS</h4>
                     <form>
-                        <input class="form-control style1" name="name" type="text" placeholder="Name">
-                        <input class="form-control style1" name="email" type="email" placeholder="Email">
-                        <input class="form-control style1" name="phone" type="text" placeholder="Phone">
-                        <select class="form-select style1" name="gender" aria-label="Default select example">
-                            <option selected>Gender</option>
+                        <input class="form-control style1" name="name" type="text" required placeholder="Name">
+                        <input class="form-control style1" name="email" type="email" required placeholder="Email">
+                        <input class="form-control style1" name="phone" type="text" pattern="[6-9][0-9]{9}" title="Please enter a valid phone number." required placeholder="Phone">
+                        <select class="form-select style1" required name="gender" aria-label="Gender">
+                            <option value="" disabled selected>Gender</option>
                             <option value="1">Male</option>
                             <option value="2">Female</option>
+                            <option value="3">Other</option>
                         </select>
+                        
                         <input class="form-control style1" name="Message" type="text" placeholder="Additional Message">
                         <div class="ak-height-35 ak-height-lg-20"></div>
                         <button type="submit" class="button-primary">
@@ -821,6 +852,56 @@
         window.addEventListener('scroll', startCounters);
         // Check on initial load
         document.addEventListener('DOMContentLoaded', startCounters);
+        </script>
+
+        
+        <script>
+          document.querySelector('form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const button = e.target.querySelector('button');
+    const form = e.target; // Reference to the form element
+    const originalButtonHTML = button.innerHTML; // Store the original button content
+
+    button.innerHTML = '<div class="loader"></div>'; // Add loader to button
+    button.disabled = true; // Disable button during submission
+
+    const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        gender: form.gender.value,
+        message: form.Message.value,
+    };
+
+    try {
+        const response = await fetch('http://localhost:3000/book-class', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+        if (result.success) {
+            // Display success message in white
+            button.innerHTML = '<span style="color: white;">Successfully Booked!</span>';
+            form.reset(); // Clear the form fields
+        } else {
+            throw new Error(result.message);
+        }
+    } catch (error) {
+        console.error(error);
+        button.innerHTML = '<span style="color: white;">Booking Failed!</span>';
+    } finally {
+        setTimeout(() => {
+            button.innerHTML = originalButtonHTML; // Reset button content
+            button.disabled = false; // Re-enable button
+        }, 3000); // Reset button after 3 seconds
+    }
+});
+
         </script>
 </body>
 
