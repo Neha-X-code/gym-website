@@ -855,54 +855,55 @@ button {
         </script>
 
         
-        <script>
-          document.querySelector('form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const button = e.target.querySelector('button');
-    const form = e.target; // Reference to the form element
-    const originalButtonHTML = button.innerHTML; // Store the original button content
-
-    button.innerHTML = '<div class="loader"></div>'; // Add loader to button
-    button.disabled = true; // Disable button during submission
-
-    const formData = {
-        name: form.name.value,
-        email: form.email.value,
-        phone: form.phone.value,
-        gender: form.gender.value,
-        message: form.Message.value,
-    };
-
-    try {
-        const response = await fetch('http://localhost:3000/book-class', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        });
-
-        const result = await response.json();
-        if (result.success) {
-            // Display success message in white
-            button.innerHTML = '<span style="color: white;">Successfully Booked!</span>';
-            form.reset(); // Clear the form fields
-        } else {
-            throw new Error(result.message);
-        }
-    } catch (error) {
-        console.error(error);
-        button.innerHTML = '<span style="color: white;">Booking Failed!</span>';
-    } finally {
-        setTimeout(() => {
-            button.innerHTML = originalButtonHTML; // Reset button content
-            button.disabled = false; // Re-enable button
-        }, 3000); // Reset button after 3 seconds
-    }
-});
-
-        </script>
+<script>
+    document.querySelector('form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+  
+      const button = e.target.querySelector('button');
+      const form = e.target; // Reference to the form element
+      const originalButtonHTML = button.innerHTML; // Store the original button content
+  
+      button.innerHTML = '<div class="loader"></div>'; // Add loader to button
+      button.disabled = true; // Disable button during submission
+  
+      const formData = {
+          name: form.name.value,
+          email: form.email.value,
+          phone: form.phone.value,
+          gender: form.gender.value,
+          message: form.Message.value,
+      };
+  
+      try {
+          const response = await fetch('http://localhost:3000/book-class', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData),
+          });
+  
+          const result = await response.json();
+          if (result.success) {
+              // Display success message in white
+              button.innerHTML = '<span style="color: white;">Successfully Booked!</span>';
+          } else {
+              throw new Error(result.message);
+          }
+      } catch (error) {
+          console.error(error);
+          button.innerHTML = '<span style="color: white;">Booking Failed!</span>';
+      } finally {
+          // Reset the form fields and button after the submission process
+          setTimeout(() => {
+              button.innerHTML = originalButtonHTML; // Reset button content
+              button.disabled = false; // Re-enable button
+              form.reset(); // Clear the form fields
+          }, 3000); // Reset button after 3 seconds
+      }
+    });
+  </script>
+  
 </body>
 
 </html>
