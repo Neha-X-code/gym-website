@@ -209,7 +209,7 @@
                 <div class="col-lg-7" data-aos="fade-left">
                     <h3 class="contact-page-section-title">How can we help?</h3>
                     <form>
-                        <div class="row">
+                        <!--<div class="row">
                             <div class="col-6">
                                 <input class="form-control style1 color2 type2" required type="text" name="name"
                                     placeholder="Write your name...">
@@ -240,7 +240,38 @@
                                     </defs>
                                 </svg>
                             </span>
-                        </button>
+                        </button>-->
+                        <div class="contact-form-content style1" id="cta-content">
+                            <div id="contactSidebarWrap">
+                                <div class="sidebar" id="contactSidebar">
+                                    <h4 class="form-title">CONTACT US</h4>
+                                    <form id="contactForm">
+                                        <input class="form-control style1" name="name" type="text" required placeholder="Name">
+                                        <input class="form-control style1" name="email" type="email" required placeholder="Email">
+                                        <input class="form-control style1" name="phone" type="text" pattern="[6-9][0-9]{9}" title="Please enter a valid phone number." required placeholder="Phone">
+                                        <textarea class="form-control style1" name="message" required placeholder="Your Message"></textarea>
+                                        <div class="ak-height-35 ak-height-lg-20"></div>
+                                        <button type="submit" class="button-primary">
+                                            <span>SEND MESSAGE</span>
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
+                                                    <g clip-path="url(#clip0_1735_935)">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0.585999 18.938L9.586 9.93799L0.585999 0.937988H6.99073L15.9907 9.93799L6.99073 18.938H0.585999Z"
+                                                            fill="white"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1735_935">
+                                                            <rect width="16" height="19" fill="white" transform="translate(0 0.5)"></rect>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -346,6 +377,51 @@
     <!-- End Video Popup -->
 
     <!-- Script -->
+    <script>
+        document.querySelector('#contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+    
+            const button = e.target.querySelector('button');
+            const form = e.target;
+            const originalButtonHTML = button.innerHTML;
+    
+            button.innerHTML = '<div class="loader"></div>';
+            button.disabled = true;
+    
+            const formData = {
+                name: form.name.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                message: form.message.value,
+            };
+    
+            try {
+                const response = await fetch('http://localhost:3000/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+    
+                const result = await response.json();
+                if (result.success) {
+                    button.innerHTML = '<span style="color: white;">Message Sent!</span>';
+                } else {
+                    throw new Error(result.message);
+                }
+            } catch (error) {
+                console.error(error);
+                button.innerHTML = '<span style="color: white;">Failed to Send!</span>';
+            } finally {
+                setTimeout(() => {
+                    button.innerHTML = originalButtonHTML;
+                    button.disabled = false;
+                    form.reset();
+                }, 3000);
+            }
+        });
+    </script>
     <script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
     <script src="assets/js/plugins/aos.js"></script>
     <script src="assets/js/plugins/lightgallery.min.js"></script>
