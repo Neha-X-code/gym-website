@@ -2,47 +2,42 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// Middleware
 app.use(bodyParser.json());
 app.use(cors());
 
-// Route to handle form submission
 app.post('/book-class', async (req, res) => {
     const { name, email, phone, gender, message } = req.body;
 
-    // Configure Nodemailer Transport with Hostinger's SMTP settings
     let transporter = nodemailer.createTransport({
-        host: 'smtp.hostinger.com', // Hostinger's SMTP server
-        port: 465, // SSL port
-        secure: true, // Set to true for SSL
+        host: process.env.SMTP_HOST,
+        port: process.env.SMTP_PORT,
+        secure: true,
         auth: {
-            user: 'enquiry@everyouthgym.in', // Sender email address
-            pass: 'Enqu1ry@2015123#', // Sender email password (ensure correct password)
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASSWORD,
         },
     });
 
     try {
-        // Send email to user (confirmation email)
         await transporter.sendMail({
-            from: '"Ever Youth Gym" <enquiry@everyouthgym.in>',
-            to: email,  // User's email for booking confirmation
+            from: `"Ever Youth Gym" <${process.env.EMAIL_USER}>`,
+            to: email,
             subject: 'Class Booking Confirmation',
             text: `Hi ${name},\n\nThank you for booking a class with us! We look forward to helping you achieve your fitness goals.\n\nBest regards,\nEver Youth Gym`,
         });
 
-        // Send email to admin (reachus@everyouthgym.in) about the new class booking
         await transporter.sendMail({
-            from: '"Ever Youth Gym" <enquiry@everyouthgym.in>',
-            to: 'reachus@everyouthgym.in', // Admin email to receive the class booking details
+            from: `"Ever Youth Gym" <${process.env.EMAIL_USER}>`,
+            to: process.env.ADMIN_EMAIL,
             subject: 'New Class Booking',
             text: `New booking received:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nGender: ${gender}\nMessage: ${message}\n\nPlease follow up with the user.`,
         });
 
-        // Send success response
         res.json({ success: true, message: 'Booking confirmed!' });
     } catch (error) {
         console.error('Error sending email:', error);
@@ -50,7 +45,6 @@ app.post('/book-class', async (req, res) => {
     }
 });
 
-// Start the server
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
